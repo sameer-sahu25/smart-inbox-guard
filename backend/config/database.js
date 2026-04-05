@@ -2,10 +2,17 @@ const { Sequelize } = require('sequelize');
 const path = require('path');
 
 // --- Teacher's Note: Smart Database Detection ---
-const databaseUrl = process.env.DATABASE_URL || 'sqlite:database.sqlite';
+const databaseUrl = process.env.DATABASE_URL;
 
-const isSqlite = databaseUrl.startsWith('sqlite:');
-const isPostgres = databaseUrl.startsWith('postgres://') || databaseUrl.startsWith('postgresql://');
+if (!databaseUrl && process.env.NODE_ENV === 'production') {
+  console.error('[CRITICAL] DATABASE_URL is missing in production environment! Check your environment variables.');
+  process.exit(1);
+}
+
+const finalDatabaseUrl = databaseUrl || 'sqlite:database.sqlite';
+
+const isSqlite = finalDatabaseUrl.startsWith('sqlite:');
+const isPostgres = finalDatabaseUrl.startsWith('postgres://') || finalDatabaseUrl.startsWith('postgresql://');
 
 const sequelizeOptions = {
   logging: process.env.NODE_ENV === 'development' ? console.log : false,
@@ -18,7 +25,7 @@ let sequelize;
 
 if (isPostgres) {
   // Use professional PostgreSQL settings for Render/Neon
-  sequelize = new Sequelize(databaseUrl, {
+  sequelize = new Sequelize(finalDatabaseUrl, {
     ...sequelizeOptions,
     dialect: 'postgres',
     dialectOptions: {
@@ -36,7 +43,7 @@ if (isPostgres) {
   });
 } else if (isSqlite) {
   // Use local SQLite for development
-  const storagePath = databaseUrl.replace('sqlite:', '');
+  const storagePath = finalDatabaseUrl.replace('sqlite:', '');
   sequelize = new Sequelize({
     ...sequelizeOptions,
     dialect: 'sqlite',
@@ -47,7 +54,7 @@ if (isPostgres) {
   sequelize = new Sequelize({
     ...sequelizeOptions,
     dialect: 'sqlite',
-    storage: databaseUrl
+    storage: finalDatabaseUrl
   });
 }
 
