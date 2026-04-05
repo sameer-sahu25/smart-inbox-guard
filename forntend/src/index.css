@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Spam AI Design System - Pixel Perfect Transformation */
+
+@layer base {
+  :root {
+    /* Primary Accent - Vibrant Magenta/Plum */
+    --primary: 330 100% 60%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Deep Black Background */
+    --background: 240 10% 2%;
+    --foreground: 0 0% 98%;
+    
+    /* Sleek Dark Cards */
+    --card: 240 10% 4%;
+    --card-foreground: 0 0% 98%;
+    
+    --popover: 240 10% 4%;
+    --popover-foreground: 0 0% 98%;
+    
+    /* Secondary - Dark Surface */
+    --secondary: 240 10% 8%;
+    --secondary-foreground: 0 0% 98%;
+    
+    /* Muted */
+    --muted: 240 10% 12%;
+    --muted-foreground: 240 5% 65%;
+    
+    /* Accent - Magenta tint */
+    --accent: 330 80% 15%;
+    --accent-foreground: 330 100% 70%;
+    
+    /* Destructive - Red */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Success - Green */
+    --success: 142 70% 50%;
+    --success-foreground: 0 0% 100%;
+    
+    /* Warning - Amber */
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 10%;
+    
+    /* Border and inputs */
+    --border: 240 10% 15%;
+    --input: 240 10% 12%;
+    --ring: 330 100% 60%;
+    
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Reference is inherently dark, so we sync both */
+    --primary: 330 100% 60%;
+    --primary-foreground: 0 0% 100%;
+    
+    --background: 240 10% 2%;
+    --foreground: 0 0% 98%;
+    
+    --card: 240 10% 4%;
+    --card-foreground: 0 0% 98%;
+    
+    --popover: 240 10% 4%;
+    --popover-foreground: 0 0% 98%;
+    
+    --secondary: 240 10% 8%;
+    --secondary-foreground: 0 0% 98%;
+    
+    --muted: 240 10% 12%;
+    --muted-foreground: 240 5% 65%;
+    
+    --accent: 330 80% 15%;
+    --accent-foreground: 330 100% 70%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --success: 142 70% 50%;
+    --success-foreground: 0 0% 100%;
+    
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 10%;
+    
+    --border: 240 10% 15%;
+    --input: 240 10% 12%;
+    --ring: 330 100% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased selection:bg-primary/30;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-[#ff4d94] to-primary;
+}
+
+.glass-card {
+  @apply bg-card/50 backdrop-blur-xl border border-white/5 shadow-[0_8px_32px_0_rgba(0,0,0,0.8)];
+}
+
+.magenta-glow {
+  @apply shadow-[0_0_20px_rgba(255,51,153,0.3)];
+}
+
+.magenta-text-glow {
+  text-shadow: 0 0 10px rgba(255,51,153,0.5);
+}
+
+/* Reference Bento Grid Layout */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5rem;
+}
+
+.bento-item {
+  @apply glass-card rounded-xl p-6 transition-all duration-300 hover:border-primary/30;
+}

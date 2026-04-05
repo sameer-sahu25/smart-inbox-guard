@@ -1,0 +1,12 @@
+{
+  "name": "smart-inbox-guard",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix forntend\" \"npm run dev --prefix backend\" \"cd ml_service && uvicorn api.main:app --reload --port 8000\"",
+    "install-all": "npm install --prefix forntend && npm install --prefix backend && pip install -r ml_service/requirements.txt"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}

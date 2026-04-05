@@ -1,0 +1,36 @@
+
+[build]
+  # The directory to change to before starting a build.
+  # Netlify will run the build command and look for dependencies in this folder.
+  base = "forntend"
+
+  # The command that will build the site.
+  # Since base is set to 'forntend', this runs inside that folder.
+  command = "npm install && npm run build"
+
+  # The directory that contains the deploy-ready HTML files and assets.
+  # This path is relative to the 'base' directory.
+  publish = "dist"
+
+[build.environment]
+  # Set Node.js version if needed
+  NODE_VERSION = "20"
+
+# Redirect rules for API and Auth proxying
+[[redirects]]
+  from = "/api/*"
+  to = "https://smart-inbox-backend-bohk.onrender.com/api/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/auth/*"
+  to = "https://smart-inbox-backend-bohk.onrender.com/auth/:splat"
+  status = 200
+  force = true
+
+# Redirect rules for Single Page Applications (SPA)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

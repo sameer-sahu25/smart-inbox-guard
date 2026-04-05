@@ -1,0 +1,8 @@
+{
+    "python.defaultInterpreterPath": "C:\\Users\\samee\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "python.analysis.extraPaths": [
+        "c:\\Users\\samee\\Downloads\\spam mail\\smart-inbox-guard\\ml_service"
+    ],
+    "python.terminal.activateEnvInSelectedTerminal": true,
+    "python.languageServer": "Pylance"
+}

@@ -1,0 +1,57 @@
+{
+  "user": {
+    "id": "ad7d8fa8-2237-4f2b-8115-9c747babb11b",
+    "email": "khushiguptasameer@gmail.com",
+    "createdAt": "2026-03-26T20:06:51.649Z"
+  },
+  "incidents": [
+    {
+      "id": "91e8b856-34c0-489e-a3c2-b727d32c0563",
+      "subject": "One-click CDN, Railway x Stripe Projects, HA Postgres",
+      "sender": "<hello@news.railway.app>",
+      "classification": "safe",
+      "confidence": 0.556,
+      "riskLevel": "unknown",
+      "isUncertain": false,
+      "processingTimeMs": 645,
+      "createdAt": "2026-03-28T09:51:06.144Z",
+      "metadata": {
+        "ipAddress": "::1",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0",
+        "wordCount": 28
+      }
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "a05e4278-924e-4662-9a2c-09e95f4740b6",
+      "action": "LOGIN",
+      "status": "success",
+      "createdAt": "2026-03-26T20:06:53.048Z"
+    },
+    {
+      "id": "5d1a498c-84cc-4b8b-a1a4-620d43b41bc8",
+      "action": "ANALYZE",
+      "status": "success",
+      "createdAt": "2026-03-26T20:09:12.945Z"
+    },
+    {
+      "id": "12a01253-6885-410c-955a-11fa0d461a4e",
+      "action": "ANALYZE",
+      "status": "success",
+      "createdAt": "2026-03-26T20:12:55.326Z"
+    },
+    {
+      "id": "122da4f4-d521-4c18-812c-a438847579a6",
+      "action": "LOGIN",
+      "status": "success",
+      "createdAt": "2026-03-28T09:37:23.509Z"
+    },
+    {
+      "id": "d0aa5842-e31a-4834-9e97-400c1cfd5deb",
+      "action": "ANALYZE",
+      "status": "success",
+      "createdAt": "2026-03-28T09:51:06.489Z"
+    }
+  ]
+}

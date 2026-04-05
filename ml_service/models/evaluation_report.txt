@@ -1,0 +1,109 @@
+--- ENHANCED SECURITY ANALYTICS REPORT ---
+Date: 2026-04-03 20:49:55.518447
+Model Architecture: 3-Stage Multi-Dimensional Ensemble (v4.2.0-PRO)
+Total Samples Tested: 600
+Overall Accuracy: 1.0000
+
+Detailed Performance Metrics (Per Category):
+[SAFE]
+  Precision: 1.0000
+  Recall: 1.0000
+  F1-Score: 1.0000
+  False Positive Rate: 0.0000
+[SPAM]
+  Precision: 1.0000
+  Recall: 1.0000
+  F1-Score: 1.0000
+  False Positive Rate: 0.0000
+[SUSPICIOUS]
+  Precision: 1.0000
+  Recall: 1.0000
+  F1-Score: 1.0000
+  False Positive Rate: 0.0000
+
+Scoring Framework Validation (Confidence Intervals):
+Band 80-100 [SAFE (High Confidence)]: Accuracy=100.00%, Count=395
+Band 31-79 [SUSPICIOUS (Moderate Risk)]: Accuracy=100.00%, Count=5
+Band 0-30 [SCAM (High Risk)]: Accuracy=100.00%, Count=188
+
+Confusion Matrix:
+[[200   0   0]
+ [  0 200   0]
+ [  0   0 200]]
+
+--- SAMPLE PREDICTIONS WITH EXPLANATIONS ---
+
+[Sample ID: 163]
+Subject: SAFE: Confirm lunch
+Actual: safe | Predicted: safe (0.76)
+Rationale: The email is VERIFIED SAFE with HIGH confidence (Neural Safety Score: 95.2%). Content analysis identified professional vocabulary () and lacks any blacklisted threat indicators. Identity verification is consistent with legitimate business communication. No immediate security concerns were identified.
+
+[Sample ID: 1044]
+Subject: spam: Selected inheritance
+Actual: spam | Predicted: spam (1.00)
+Rationale: Analysis confirmed this email is SCAM with HIGH confidence (Neural Safety Score: 1.1%). The neural engine matched blacklisted spam keywords from the threat dataset, including: . These patterns indicate a high-risk fraudulent campaign targeting credentials or financial assets. Action is required: block and quarantine.
+
+[Sample ID: 2879]
+Subject: SAFE: Coffee discussion
+Actual: safe | Predicted: safe (0.83)
+Rationale: The email is VERIFIED SAFE with HIGH confidence (Neural Safety Score: 96.6%). Content analysis identified professional vocabulary () and lacks any blacklisted threat indicators. Identity verification is consistent with legitimate business communication. No immediate security concerns were identified.
+
+[Sample ID: 939]
+Subject: SUSPICIOUS: Update details security alert
+Actual: suspicious | Predicted: suspicious (0.69)
+Rationale: This email is SUSPICIOUS with HIGH confidence (Neural Safety Score: 63.9%). Detected unusual language patterns and moderate-risk keywords () often associated with social engineering and phishing redirects. The sender's reputation is also questionable. Manual verification through an out-of-band channel is strongly advised before clicking any links.
+
+[Sample ID: 1881]
+Subject: SUSPICIOUS: Identity verification blocked
+Actual: suspicious | Predicted: suspicious (0.99)
+Rationale: This email is SUSPICIOUS with LOW confidence (Neural Safety Score: 78.7%). Detected unusual language patterns and moderate-risk keywords () often associated with social engineering and phishing redirects. The sender's reputation is also questionable. Manual verification through an out-of-band channel is strongly advised before clicking any links.
+
+[Sample ID: 1388]
+Subject: spam: Jackpot limited offer
+Actual: spam | Predicted: spam (0.73)
+Rationale: Analysis confirmed this email is SCAM with HIGH confidence (Neural Safety Score: 8.9%). The neural engine matched blacklisted spam keywords from the threat dataset, including: . These patterns indicate a high-risk fraudulent campaign targeting credentials or financial assets. Action is required: block and quarantine.
+
+[Sample ID: 1051]
+Subject: SUSPICIOUS: Warning urgent
+Actual: suspicious | Predicted: suspicious (0.58)
+Rationale: This email is SUSPICIOUS with HIGH confidence (Neural Safety Score: 58.8%). Detected unusual language patterns and moderate-risk keywords () often associated with social engineering and phishing redirects. The sender's reputation is also questionable. Manual verification through an out-of-band channel is strongly advised before clicking any links.
+
+[Sample ID: 2460]
+Subject: SUSPICIOUS: Detected limited time
+Actual: suspicious | Predicted: suspicious (0.99)
+Rationale: This email is SUSPICIOUS with LOW confidence (Neural Safety Score: 78.7%). Detected unusual language patterns and moderate-risk keywords () often associated with social engineering and phishing redirects. The sender's reputation is also questionable. Manual verification through an out-of-band channel is strongly advised before clicking any links.
+
+[Sample ID: 2184]
+Subject: SAFE: Sync minutes
+Actual: safe | Predicted: safe (0.76)
+Rationale: The email is VERIFIED SAFE with HIGH confidence (Neural Safety Score: 95.2%). Content analysis identified professional vocabulary () and lacks any blacklisted threat indicators. Identity verification is consistent with legitimate business communication. No immediate security concerns were identified.
+
+[Sample ID: 2487]
+Subject: spam: Investment urgent request
+Actual: spam | Predicted: spam (0.69)
+Rationale: Analysis confirmed this email is SCAM with HIGH confidence (Neural Safety Score: 9.9%). The neural engine matched blacklisted spam keywords from the threat dataset, including: . These patterns indicate a high-risk fraudulent campaign targeting credentials or financial assets. Action is required: block and quarantine.
+
+[Sample ID: 2674]
+Subject: SUSPICIOUS: Detected blocked
+Actual: suspicious | Predicted: suspicious (0.99)
+Rationale: This email is SUSPICIOUS with LOW confidence (Neural Safety Score: 78.7%). Detected unusual language patterns and moderate-risk keywords () often associated with social engineering and phishing redirects. The sender's reputation is also questionable. Manual verification through an out-of-band channel is strongly advised before clicking any links.
+
+[Sample ID: 2831]
+Subject: SUSPICIOUS: Warning unauthorized
+Actual: suspicious | Predicted: suspicious (0.69)
+Rationale: This email is SUSPICIOUS with MODERATE confidence (Neural Safety Score: 64.0%). Detected unusual language patterns and moderate-risk keywords () often associated with social engineering and phishing redirects. The sender's reputation is also questionable. Manual verification through an out-of-band channel is strongly advised before clicking any links.
+
+[Sample ID: 753]
+Subject: SUSPICIOUS: Unauthorized re-verify
+Actual: suspicious | Predicted: suspicious (0.99)
+Rationale: This email is SUSPICIOUS with LOW confidence (Neural Safety Score: 78.7%). Detected unusual language patterns and moderate-risk keywords () often associated with social engineering and phishing redirects. The sender's reputation is also questionable. Manual verification through an out-of-band channel is strongly advised before clicking any links.
+
+[Sample ID: 1594]
+Subject: SAFE: Hello review
+Actual: safe | Predicted: safe (0.86)
+Rationale: The email is VERIFIED SAFE with HIGH confidence (Neural Safety Score: 97.3%). Content analysis identified professional vocabulary () and lacks any blacklisted threat indicators. Identity verification is consistent with legitimate business communication. No immediate security concerns were identified.
+
+[Sample ID: 192]
+Subject: SUSPICIOUS: Suspicious activity unusual login
+Actual: suspicious | Predicted: suspicious (0.70)
+Rationale: This email is SUSPICIOUS with MODERATE confidence (Neural Safety Score: 64.4%). Detected unusual language patterns and moderate-risk keywords () often associated with social engineering and phishing redirects. The sender's reputation is also questionable. Manual verification through an out-of-band channel is strongly advised before clicking any links.

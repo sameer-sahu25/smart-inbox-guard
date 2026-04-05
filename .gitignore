@@ -1,0 +1,19 @@
+# Ignore the 8K problem (Dependencies)
+node_modules/
+forntend/node_modules/
+backend/node_modules/
+.venv/
+venv/
+ENV/
+__pycache__/
+*.pyc
+
+# Ignore local secrets and OS files
+.env
+forntend/.env
+.DS_Store
+Thumbs.db
+
+# Ignore build outputs
+forntend/dist/
+backend/dist/

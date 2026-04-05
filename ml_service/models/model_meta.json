@@ -1,0 +1,22 @@
+{
+  "trained_at": "2026-03-24T21:07:28.886831",
+  "total_samples": 3000,
+  "label_distribution": {
+    "suspicious": 1000,
+    "safe": 1000,
+    "scam": 1000
+  },
+  "keyword_count": 3000,
+  "scam_recall": 1.0,
+  "classes": [
+    "safe",
+    "scam",
+    "suspicious"
+  ],
+  "ensemble_weights": {
+    "stage1": 0.4,
+    "stage2": 0.2,
+    "stage3": 0.4
+  },
+  "template_override": true
+}
