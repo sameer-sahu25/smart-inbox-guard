@@ -24,6 +24,7 @@ app.use(helmet({
 }));
 const allowedOrigins = [
   process.env.FRONTEND_URL,
+  'https://smart-inbox-guard.netlify.app', // Common pattern for user
   'http://localhost:8001',
   'http://127.0.0.1:8001',
   'http://localhost:8080',
@@ -34,8 +35,13 @@ app.use(cors({
   origin: function (origin, callback) {
     // allow requests with no origin (like mobile apps or curl requests)
     if (!origin) return callback(null, true);
-    if (allowedOrigins.indexOf(origin) === -1) {
-      const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
+    
+    // Check if origin matches allowed list OR is a netlify subdomain
+    const isAllowed = allowedOrigins.indexOf(origin) !== -1 || 
+                     origin.endsWith('.netlify.app');
+                     
+    if (!isAllowed) {
+      const msg = `The CORS policy for this site does not allow access from origin: ${origin}`;
       return callback(new Error(msg), false);
     }
     return callback(null, true);
