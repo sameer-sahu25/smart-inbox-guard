@@ -2,6 +2,9 @@
   "name": "spam-detection-backend",
   "version": "1.0.0",
   "main": "server.js",
+  "engines": {
+    "node": ">=24.0.0"
+  },
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
