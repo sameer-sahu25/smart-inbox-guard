@@ -8,6 +8,24 @@ const mlService = require('./services/mlService');
 
 async function startServer() {
   try {
+    // Check critical env variables
+    const requiredEnv = ['DATABASE_URL', 'JWT_SECRET', 'JWT_EXPIRES_IN'];
+    const missing = requiredEnv.filter(k => !process.env[k]);
+    if (missing.length > 0) {
+      console.error(`[CRITICAL] Missing environment variables: ${missing.join(', ')}`);
+      process.exit(1);
+    }
+
+    // Verify JWT_EXPIRES_IN is a valid timespan string or number
+    const jwt = require('jsonwebtoken');
+    try {
+      jwt.sign({ id: 1 }, process.env.JWT_SECRET, { expiresIn: process.env.JWT_EXPIRES_IN });
+    } catch (e) {
+      console.error(`[CRITICAL] JWT_EXPIRES_IN is invalid: ${process.env.JWT_EXPIRES_IN}`);
+      console.error(`Please set it to a valid value like "1825d" or "7d".`);
+      process.exit(1);
+    }
+
     await sequelize.authenticate();
     console.log('Database connection established successfully');
     await sequelize.sync({ alter: false });

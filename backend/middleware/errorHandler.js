@@ -64,6 +64,7 @@ const errorHandler = (err, req, res, next) => {
   res.status(500).json({ 
     success: false, 
     error: isDev ? err.message : 'Internal server error',
+    message: err.message, // Add message property for frontend to handle
     ...(isDev ? { stack: err.stack } : {})
   });
 };

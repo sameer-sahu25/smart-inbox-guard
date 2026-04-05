@@ -57,7 +57,10 @@ const Login = () => {
         }
         navigate("/");
       } else {
-        const errorMsg = data.errors ? data.errors.map((e: any) => e.msg).join(", ") : (data.message || "Action failed");
+        const errorMsg = data.errors 
+          ? data.errors.map((e: any) => e.msg).join(", ") 
+          : (data.message || data.error || "Action failed");
+          
         if (response.status === 409) {
           toast.error("This email is already registered. Please log in instead.");
         } else {

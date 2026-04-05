@@ -24,7 +24,7 @@ app.use(helmet({
 }));
 const allowedOrigins = [
   process.env.FRONTEND_URL,
-  'https://smart-inbox-guard.netlify.app', // Common pattern for user
+  'https://smart-inbox-guard.netlify.app',
   'http://localhost:8001',
   'http://127.0.0.1:8001',
   'http://localhost:8080',
@@ -37,17 +37,19 @@ app.use(cors({
     if (!origin) return callback(null, true);
     
     // Check if origin matches allowed list OR is a netlify subdomain
-    const isAllowed = allowedOrigins.indexOf(origin) !== -1 || 
-                     origin.endsWith('.netlify.app');
+    const isAllowed = allowedOrigins.some(o => origin === o) || 
+                     origin.endsWith('.netlify.app') ||
+                     origin.includes('netlify.app');
                      
     if (!isAllowed) {
-      const msg = `The CORS policy for this site does not allow access from origin: ${origin}`;
-      return callback(new Error(msg), false);
+      console.warn(`CORS blocked request from origin: ${origin}`);
+      return callback(null, false); // Don't throw error, just block
     }
     return callback(null, true);
   },
   credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
 }));
 app.use(morgan('combined'));
 app.use(express.json({ limit: '10kb' }));
