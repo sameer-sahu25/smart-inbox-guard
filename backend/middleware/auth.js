@@ -13,6 +13,13 @@ const auth = async (req, res, next) => {
     try {
       const decoded = jwt.verify(token, process.env.JWT_SECRET);
       
+      // Security Consideration: Tokens are now valid for 5 years.
+      // This implies that unless a user is deactivated or deleted, their token remains valid.
+      // In a real production environment, consider implementing:
+      // 1. Token revocation (blacklist)
+      // 2. Checking password changed timestamp
+      // 3. Shorter access tokens with refresh tokens
+      
       const user = await User.findByPk(decoded.id);
       if (!user || !user.isActive) {
         return res.status(401).json({ success: false, error: 'User account not found or deactivated.' });
