@@ -4,6 +4,7 @@ import { useAuth } from "./use-auth";
 export interface DashboardStats {
   total_analyzed: number;
   scam_detected: number;
+  suspicious_incidents: number;
   phishing_alerts: number;
   safe_emails: number;
 }
@@ -131,10 +132,14 @@ export const useDashboardData = () => {
       if (rawData.trend && Array.isArray(rawData.trend)) {
         rawData.trend = rawData.trend.map((day: any) => ({
           ...day,
-          safe: day.safe ?? 0,
-          suspicious: day.suspicious ?? 0,
-          spam: day.spam ?? 0,
-          total: day.total ?? ((day.safe ?? 0) + (day.suspicious ?? 0) + (day.spam ?? 0))
+          safe: day.safe ?? day.safe_emails ?? 0,
+          suspicious: day.suspicious ?? day.phishing ?? day.phishing_alerts ?? day.suspicious_incidents ?? 0,
+          spam: day.spam ?? day.scam ?? day.scam_detected ?? 0,
+          total:
+            day.total ??
+            ((day.safe ?? day.safe_emails ?? 0) +
+              (day.suspicious ?? day.phishing ?? day.phishing_alerts ?? day.suspicious_incidents ?? 0) +
+              (day.spam ?? day.scam ?? day.scam_detected ?? 0))
         }));
       }
 
@@ -194,6 +199,7 @@ export const useDashboardData = () => {
   const safeStats: DashboardStats = {
     total_analyzed: data?.stats?.total_analyzed ?? 0,
     scam_detected: data?.stats?.scam_detected ?? 0,
+    suspicious_incidents: data?.stats?.suspicious_incidents ?? data?.stats?.phishing_alerts ?? 0,
     phishing_alerts: data?.stats?.phishing_alerts ?? 0,
     safe_emails: data?.stats?.safe_emails ?? 0,
   };

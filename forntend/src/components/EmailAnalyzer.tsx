@@ -100,6 +100,7 @@ interface AnalysisResult {
   scamProbability: number;
   confidenceLevel: "HIGH" | "MODERATE" | "LOW" | "UNCERTAIN";
   confidencePercentage: number;
+  explanation?: string;
   threatDimensions: ThreatDimension[];
   safetyAssessment: SafetyAssessment;
   identifiedProblems: DetectedProblem[];
@@ -139,6 +140,7 @@ const EmailAnalyzer = () => {
   const [showMetadata, setShowMetadata] = useState(false);
   const { isScanning, setIsScanning } = useScanning();
   const [result, setResult] = useState<AnalysisResult | null>(null);
+  const [analysisError, setAnalysisError] = useState<string | null>(null);
   const { token } = useAuth();
   const [mlStatus, setMlStatus] = useState<'online' | 'offline' | 'checking'>('checking');
   const [lastCheckTime, setLastCheckTime] = useState<Date | null>(null);
@@ -214,6 +216,7 @@ const EmailAnalyzer = () => {
     
     setIsScanning(true);
     setResult(null);
+    setAnalysisError(null);
     setShowMetadata(false); // Robust Reset: Hide technical metadata on new scan
 
     const token = localStorage.getItem('token');
@@ -234,7 +237,7 @@ const EmailAnalyzer = () => {
       const json = await response.json();
       if (json.success) {
         let finalResult = json.data;
-        if (finalResult.verdict === 'SAFE' && finalResult.neuralFlags.some(flag => flag.severity === 'CRITICAL')) {
+        if (finalResult.verdict === 'SAFE' && (finalResult.neuralFlags ?? []).some((flag: NeuralFlag) => flag.severity === 'CRITICAL')) {
           finalResult.verdict = 'SUSPICIOUS';
           finalResult.gradeLabel = 'Warning: ML service may be miscalibrated';
         }
@@ -257,6 +260,7 @@ const EmailAnalyzer = () => {
         errorMessage = error.message || 'An unexpected error occurred during analysis.';
       }
       
+      setAnalysisError(errorMessage);
       toast.error(errorMessage, {
         description: 'Try refining your input or checking service status.'
       });
@@ -276,7 +280,8 @@ const EmailAnalyzer = () => {
 
     if (!result) return defaultStyles;
 
-    switch (result.label?.toLowerCase()) {
+    const classification = (result.verdict || result.label || "").toLowerCase();
+    switch (classification) {
       case "safe":
         return { 
           icon: CheckCircle, 
@@ -534,7 +539,23 @@ const EmailAnalyzer = () => {
         </div>
 
         {/* Results Section - Reference Style */}
-        {result && gradeInfo && result.verdict !== 'OFFLINE' && (result.label !== 'unknown' || result.confidencePercentage > 0) && (
+        {analysisError && (
+          <div className="mt-8 p-4 rounded-xl border border-destructive/40 bg-destructive/10">
+            <p className="text-[11px] font-bold text-destructive uppercase tracking-widest">Analysis Failed</p>
+            <p className="text-xs text-destructive/80 mt-1">{analysisError}</p>
+          </div>
+        )}
+
+        {result?.verdict === 'OFFLINE' && (
+          <div className="mt-8 p-4 rounded-xl border border-amber-500/40 bg-amber-500/10">
+            <p className="text-[11px] font-bold text-amber-500 uppercase tracking-widest">Neural Engine Offline</p>
+            <p className="text-xs text-amber-200/80 mt-1">
+              {result.explanation || "The analysis engine is unavailable right now. Please start the ML service and try again."}
+            </p>
+          </div>
+        )}
+
+        {result && gradeInfo && result.verdict !== 'OFFLINE' && (
           <div className="mt-12 pt-12 border-t border-white/5 animate-scale-in">
             <div className="grid md:grid-cols-3 gap-8">
               {/* Classification Metric */}

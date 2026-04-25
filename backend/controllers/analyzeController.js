@@ -1,4 +1,4 @@
-const classificationService = require('../services/classificationService');
+  const classificationService = require('../services/classificationService');
 const { success, error } = require('../utils/responseHelper');
 
 exports.analyze = async (req, res, next) => {

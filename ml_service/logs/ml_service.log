@@ -4903,3 +4903,252 @@ KeyError: 'nb'
 2026-04-06 00:29:41,203 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 5b1a23ac-29c7-469a-9060-d8ac8407d789
 2026-04-06 00:29:49,159 [INFO] ml-service: Processing classification request e67fb39d-56e0-4621-a540-d5d77d3b1098
 2026-04-06 00:29:49,398 [INFO] ml-service: Request e67fb39d-56e0-4621-a540-d5d77d3b1098 classified as spam with 0.31 confidence
+2026-04-06 00:49:03,608 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 21d6cc53-df4c-4530-8022-07075da84f87
+2026-04-06 00:49:03,616 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 21d6cc53-df4c-4530-8022-07075da84f87
+2026-04-06 00:49:24,193 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request a84c4b81-f320-4f42-b382-050df627c75a
+2026-04-06 00:49:24,211 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for a84c4b81-f320-4f42-b382-050df627c75a
+2026-04-06 00:50:00,697 [INFO] ml-service: Processing classification request 465c47d2-dae1-4308-b31a-eca1818f862f
+2026-04-06 00:50:00,908 [INFO] ml-service: Request 465c47d2-dae1-4308-b31a-eca1818f862f classified as spam with 0.31 confidence
+2026-04-06 00:50:03,796 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request a68ca929-effd-4d24-adc0-dab47f011dcb
+2026-04-06 00:50:03,828 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for a68ca929-effd-4d24-adc0-dab47f011dcb
+2026-04-06 00:50:24,689 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 6576f284-c2b1-470c-8724-b35a1bbc903c
+2026-04-06 00:50:24,702 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 6576f284-c2b1-470c-8724-b35a1bbc903c
+2026-04-06 00:51:24,427 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 77010c3e-369c-40dd-8451-24be47297951
+2026-04-06 00:51:24,431 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 77010c3e-369c-40dd-8451-24be47297951
+2026-04-06 00:52:24,394 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request b94216cf-de78-44de-9e12-8f2c81910b2e
+2026-04-06 00:52:24,400 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for b94216cf-de78-44de-9e12-8f2c81910b2e
+2026-04-06 00:53:24,617 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 608739d7-e5f0-49e9-9d79-299f934a500e
+2026-04-06 00:53:24,623 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 608739d7-e5f0-49e9-9d79-299f934a500e
+2026-04-06 00:55:24,479 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 256b79ac-e7f0-4e65-83cb-68e1db409166
+2026-04-06 00:55:24,484 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 256b79ac-e7f0-4e65-83cb-68e1db409166
+2026-04-06 00:57:11,424 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 6b2d8728-3818-4695-82b1-716b859726c2
+2026-04-06 00:57:11,428 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 6b2d8728-3818-4695-82b1-716b859726c2
+2026-04-06 00:58:11,522 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 5b3f87a5-fb45-4d56-836a-65a6ef880609
+2026-04-06 00:58:11,528 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 5b3f87a5-fb45-4d56-836a-65a6ef880609
+2026-04-06 00:59:11,358 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 306de588-aaa4-4467-998d-fd46722844e1
+2026-04-06 00:59:11,365 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 306de588-aaa4-4467-998d-fd46722844e1
+2026-04-06 00:59:18,792 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request e5b8eec1-bb7a-4593-bcdf-b2bd283f946c
+2026-04-06 00:59:18,797 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for e5b8eec1-bb7a-4593-bcdf-b2bd283f946c
+2026-04-06 01:00:19,410 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 1bb37979-ddef-4cc2-83a0-62204f38d4d1
+2026-04-06 01:00:19,416 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 1bb37979-ddef-4cc2-83a0-62204f38d4d1
+2026-04-06 01:01:19,508 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 17976212-5ff1-4ba6-94f7-f5fb86e356e6
+2026-04-06 01:01:19,512 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 17976212-5ff1-4ba6-94f7-f5fb86e356e6
+2026-04-06 01:02:19,420 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 88450def-90bb-4381-a844-cb607082706a
+2026-04-06 01:02:19,427 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 88450def-90bb-4381-a844-cb607082706a
+2026-04-06 01:03:19,398 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 93ee5548-db34-42d3-af27-57a1beb95e95
+2026-04-06 01:03:19,404 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 93ee5548-db34-42d3-af27-57a1beb95e95
+2026-04-06 01:04:19,698 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 03361b30-6234-4fb9-bc7a-95917b2460a5
+2026-04-06 01:04:19,703 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 03361b30-6234-4fb9-bc7a-95917b2460a5
+2026-04-06 01:05:19,576 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 311d0087-db1f-4bc0-8ed5-7ab7b0bf46d8
+2026-04-06 01:05:19,583 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 311d0087-db1f-4bc0-8ed5-7ab7b0bf46d8
+2026-04-06 01:19:15,066 [INFO] ml-service: Loading model artifacts...
+2026-04-06 01:19:15,288 [INFO] ml-service: Successfully loaded stage1_pipeline from C:\Users\samee\Downloads\spam mail\smart-inbox-guard\ml_service\models\artifacts\model_stage1.pkl
+2026-04-06 01:19:15,640 [INFO] ml-service: Successfully loaded stage2_model from C:\Users\samee\Downloads\spam mail\smart-inbox-guard\ml_service\models\artifacts\model_stage2.pkl
+2026-04-06 01:19:15,938 [INFO] ml-service: Successfully loaded stage3_model from C:\Users\samee\Downloads\spam mail\smart-inbox-guard\ml_service\models\artifacts\model_stage3.pkl
+2026-04-06 01:19:15,939 [INFO] ml-service: Successfully loaded stage3_feature_names from C:\Users\samee\Downloads\spam mail\smart-inbox-guard\ml_service\models\artifacts\stage3_feature_names.pkl
+2026-04-06 01:19:15,941 [INFO] ml-service: Successfully loaded classes from C:\Users\samee\Downloads\spam mail\smart-inbox-guard\ml_service\models\artifacts\label_classes.pkl
+2026-04-06 01:19:15,943 [INFO] ml-service: Successfully loaded meta from C:\Users\samee\Downloads\spam mail\smart-inbox-guard\ml_service\models\artifacts\model_meta.json
+2026-04-06 01:19:15,944 [INFO] ml-service: Successfully loaded keyword_lookup from C:\Users\samee\Downloads\spam mail\smart-inbox-guard\ml_service\models\artifacts\keyword_lookup.json
+2026-04-06 01:19:15,946 [INFO] ml-service: Successfully loaded scam_domains from C:\Users\samee\Downloads\spam mail\smart-inbox-guard\ml_service\models\artifacts\scam_domains.json
+2026-04-06 01:19:15,946 [INFO] ml-service: Model Metadata: {
+  "trained_at": "2026-04-03T20:47:46.302467",
+  "total_samples": 3000,
+  "label_distribution": {
+    "suspicious": 1000,
+    "safe": 1000,
+    "spam": 1000
+  },
+  "keyword_count": 0,
+  "spam_recall": 1.0,
+  "classes": [
+    "safe",
+    "spam",
+    "suspicious"
+  ],
+  "ensemble_weights": {
+    "stage1": 0.4,
+    "stage2": 0.2,
+    "stage3": 0.4
+  },
+  "template_override": true
+}
+2026-04-06 01:20:10,661 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 7da39775-8afd-4392-898b-f208dada60ca
+2026-04-06 01:20:10,674 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 7da39775-8afd-4392-898b-f208dada60ca
+2026-04-06 01:21:10,641 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 5dc2b381-2a52-4ebb-87b3-124ba1a943d0
+2026-04-06 01:21:10,647 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 5dc2b381-2a52-4ebb-87b3-124ba1a943d0
+2026-04-06 01:21:12,841 [INFO] ml-service: Processing classification request bc220e85-0a0d-4dcf-a948-6ae937fc739c
+2026-04-06 01:21:12,926 [INFO] ml-service: Request bc220e85-0a0d-4dcf-a948-6ae937fc739c classified as safe with 0.74 confidence
+2026-04-06 01:22:10,559 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request b80bec6d-3a8d-45a3-b41d-c0fb35aa1f4f
+2026-04-06 01:22:10,564 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for b80bec6d-3a8d-45a3-b41d-c0fb35aa1f4f
+2026-04-06 01:23:11,263 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 14be9ad8-a18f-4190-8acf-9336d4b020c0
+2026-04-06 01:23:11,279 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 14be9ad8-a18f-4190-8acf-9336d4b020c0
+2026-04-06 01:24:10,673 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request e092fb26-6764-45e2-ac83-bd993623f52f
+2026-04-06 01:24:10,680 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for e092fb26-6764-45e2-ac83-bd993623f52f
+2026-04-06 01:25:11,012 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 7dc1f47e-e2e1-4a0a-a45a-86a75d8aeb5a
+2026-04-06 01:25:11,022 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 7dc1f47e-e2e1-4a0a-a45a-86a75d8aeb5a
+2026-04-06 01:26:10,737 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 7cc3a784-81d4-4de6-94ae-5714d9dc54ef
+2026-04-06 01:26:10,740 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 7cc3a784-81d4-4de6-94ae-5714d9dc54ef
+2026-04-06 01:27:11,342 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 605aa21e-1214-46cd-a563-3c0fc4bd3dce
+2026-04-06 01:27:11,347 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 605aa21e-1214-46cd-a563-3c0fc4bd3dce
+2026-04-06 01:28:11,478 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 1e392640-420c-4df7-9356-5e21ef6f42d7
+2026-04-06 01:28:11,483 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 1e392640-420c-4df7-9356-5e21ef6f42d7
+2026-04-06 01:29:11,405 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request a196c781-373e-4b8d-a6fd-61a159e24be7
+2026-04-06 01:29:11,409 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for a196c781-373e-4b8d-a6fd-61a159e24be7
+2026-04-06 01:30:11,730 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 65ba5fb7-839a-478d-ab70-43fe79a44e82
+2026-04-06 01:30:11,734 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 65ba5fb7-839a-478d-ab70-43fe79a44e82
+2026-04-06 01:31:11,350 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request a772a03f-92f8-421e-8938-02b1fb9a4ef3
+2026-04-06 01:31:11,354 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for a772a03f-92f8-421e-8938-02b1fb9a4ef3
+2026-04-06 01:32:11,647 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request c8bf83a3-02d9-44eb-ad59-e1814698d1ec
+2026-04-06 01:32:11,651 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for c8bf83a3-02d9-44eb-ad59-e1814698d1ec
+2026-04-06 01:33:11,334 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request ee9b8793-aefe-4b7e-93bc-4d2c00715c74
+2026-04-06 01:33:11,339 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for ee9b8793-aefe-4b7e-93bc-4d2c00715c74
+2026-04-06 01:34:11,710 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 2a82c063-9414-4f94-a717-d400fa0b7293
+2026-04-06 01:34:11,715 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 2a82c063-9414-4f94-a717-d400fa0b7293
+2026-04-06 01:34:30,270 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 3db6422e-62d2-44f7-b436-ef718072c34b
+2026-04-06 01:34:30,275 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 3db6422e-62d2-44f7-b436-ef718072c34b
+2026-04-06 01:35:30,360 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request d7443705-fc44-451a-acde-0d815f396416
+2026-04-06 01:35:30,366 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for d7443705-fc44-451a-acde-0d815f396416
+2026-04-06 01:35:37,597 [INFO] ml-service: Processing classification request bcd6f908-d304-477e-9aeb-bbfca62e9a5a
+2026-04-06 01:35:37,671 [INFO] ml-service: Request bcd6f908-d304-477e-9aeb-bbfca62e9a5a classified as spam with 0.24 confidence
+2026-04-06 01:36:30,526 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 6e6c4415-5b2d-4665-8b48-4c5c17328de6
+2026-04-06 01:36:30,533 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 6e6c4415-5b2d-4665-8b48-4c5c17328de6
+2026-04-06 01:37:30,720 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 84879750-b6fa-4df2-a2f4-79d5a9cc9661
+2026-04-06 01:37:30,723 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 84879750-b6fa-4df2-a2f4-79d5a9cc9661
+2026-04-06 01:38:30,432 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request be5c50ed-ff2f-4f8a-b7b8-8fdfdd3ab6b1
+2026-04-06 01:38:30,437 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for be5c50ed-ff2f-4f8a-b7b8-8fdfdd3ab6b1
+2026-04-06 01:39:30,934 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 3cd47b61-bd68-49da-966a-a0912e9f2785
+2026-04-06 01:39:30,940 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 3cd47b61-bd68-49da-966a-a0912e9f2785
+2026-04-06 01:40:30,769 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 63048cb0-4cf4-4aa4-9881-354b6b29573e
+2026-04-06 01:40:30,773 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 63048cb0-4cf4-4aa4-9881-354b6b29573e
+2026-04-06 02:00:50,085 [INFO] ml-service: Loading model artifacts...
+2026-04-06 02:00:50,343 [INFO] ml-service: Successfully loaded stage1_pipeline from C:\Users\samee\Downloads\spam mail\smart-inbox-guard\ml_service\models\artifacts\model_stage1.pkl
+2026-04-06 02:00:50,889 [INFO] ml-service: Successfully loaded stage2_model from C:\Users\samee\Downloads\spam mail\smart-inbox-guard\ml_service\models\artifacts\model_stage2.pkl
+2026-04-06 02:00:51,327 [INFO] ml-service: Successfully loaded stage3_model from C:\Users\samee\Downloads\spam mail\smart-inbox-guard\ml_service\models\artifacts\model_stage3.pkl
+2026-04-06 02:00:51,329 [INFO] ml-service: Successfully loaded stage3_feature_names from C:\Users\samee\Downloads\spam mail\smart-inbox-guard\ml_service\models\artifacts\stage3_feature_names.pkl
+2026-04-06 02:00:51,332 [INFO] ml-service: Successfully loaded classes from C:\Users\samee\Downloads\spam mail\smart-inbox-guard\ml_service\models\artifacts\label_classes.pkl
+2026-04-06 02:00:51,335 [INFO] ml-service: Successfully loaded meta from C:\Users\samee\Downloads\spam mail\smart-inbox-guard\ml_service\models\artifacts\model_meta.json
+2026-04-06 02:00:51,336 [INFO] ml-service: Successfully loaded keyword_lookup from C:\Users\samee\Downloads\spam mail\smart-inbox-guard\ml_service\models\artifacts\keyword_lookup.json
+2026-04-06 02:00:51,337 [INFO] ml-service: Successfully loaded scam_domains from C:\Users\samee\Downloads\spam mail\smart-inbox-guard\ml_service\models\artifacts\scam_domains.json
+2026-04-06 02:00:51,339 [INFO] ml-service: Model Metadata: {
+  "trained_at": "2026-04-03T20:47:46.302467",
+  "total_samples": 3000,
+  "label_distribution": {
+    "suspicious": 1000,
+    "safe": 1000,
+    "spam": 1000
+  },
+  "keyword_count": 0,
+  "spam_recall": 1.0,
+  "classes": [
+    "safe",
+    "spam",
+    "suspicious"
+  ],
+  "ensemble_weights": {
+    "stage1": 0.4,
+    "stage2": 0.2,
+    "stage3": 0.4
+  },
+  "template_override": true
+}
+2026-04-06 02:01:09,035 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request eddf35b1-6cb5-4725-8e02-bc03466e37fa
+2026-04-06 02:01:09,223 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for eddf35b1-6cb5-4725-8e02-bc03466e37fa
+2026-04-06 02:02:09,652 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 12a07704-45c3-408b-923e-f4172556e165
+2026-04-06 02:02:09,659 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 12a07704-45c3-408b-923e-f4172556e165
+2026-04-06 02:03:09,518 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 5eeca3ce-4472-44cb-b0ac-e78f4409cd74
+2026-04-06 02:03:09,526 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 5eeca3ce-4472-44cb-b0ac-e78f4409cd74
+2026-04-06 02:04:09,650 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 5a6a2163-055d-4a59-8049-f335c9500957
+2026-04-06 02:04:09,654 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 5a6a2163-055d-4a59-8049-f335c9500957
+2026-04-06 02:05:02,325 [INFO] ml-service: Processing classification request b5a1fbbf-0091-4109-a314-c6ec181124d4
+2026-04-06 02:05:02,504 [INFO] ml-service: Request b5a1fbbf-0091-4109-a314-c6ec181124d4 classified as spam with 0.24 confidence
+2026-04-06 02:05:02,774 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 31bdf0d7-1d69-479a-be5a-33a9ae0ca714
+2026-04-06 02:05:02,784 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 31bdf0d7-1d69-479a-be5a-33a9ae0ca714
+2026-04-06 02:05:15,762 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 0f036d6e-91b8-4fc8-b59b-8345ff414a73
+2026-04-06 02:05:15,785 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 0f036d6e-91b8-4fc8-b59b-8345ff414a73
+2026-04-06 02:05:15,947 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 4ee9dfe4-2fcd-49e9-9ccd-65cfe16f7f36
+2026-04-06 02:05:15,955 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 4ee9dfe4-2fcd-49e9-9ccd-65cfe16f7f36
+2026-04-06 02:06:09,669 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 5157a587-37dd-4b4c-b07e-551c98b0a384
+2026-04-06 02:06:09,677 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 5157a587-37dd-4b4c-b07e-551c98b0a384
+2026-04-06 02:07:19,069 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 1605cdce-46bd-4a3d-aed9-fe777dd34757
+2026-04-06 02:07:19,078 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 1605cdce-46bd-4a3d-aed9-fe777dd34757
+2026-04-06 02:08:11,659 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 60922c85-a907-4bcd-990e-c667a25ed39d
+2026-04-06 02:08:11,672 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 60922c85-a907-4bcd-990e-c667a25ed39d
+2026-04-06 18:13:33,820 [INFO] ml-service: Loading model artifacts...
+2026-04-06 18:13:34,053 [INFO] ml-service: Successfully loaded stage1_pipeline from C:\Users\samee\Downloads\spam mail\smart-inbox-guard\ml_service\models\artifacts\model_stage1.pkl
+2026-04-06 18:13:34,535 [INFO] ml-service: Successfully loaded stage2_model from C:\Users\samee\Downloads\spam mail\smart-inbox-guard\ml_service\models\artifacts\model_stage2.pkl
+2026-04-06 18:13:34,916 [INFO] ml-service: Successfully loaded stage3_model from C:\Users\samee\Downloads\spam mail\smart-inbox-guard\ml_service\models\artifacts\model_stage3.pkl
+2026-04-06 18:13:34,918 [INFO] ml-service: Successfully loaded stage3_feature_names from C:\Users\samee\Downloads\spam mail\smart-inbox-guard\ml_service\models\artifacts\stage3_feature_names.pkl
+2026-04-06 18:13:34,920 [INFO] ml-service: Successfully loaded classes from C:\Users\samee\Downloads\spam mail\smart-inbox-guard\ml_service\models\artifacts\label_classes.pkl
+2026-04-06 18:13:34,921 [INFO] ml-service: Successfully loaded meta from C:\Users\samee\Downloads\spam mail\smart-inbox-guard\ml_service\models\artifacts\model_meta.json
+2026-04-06 18:13:34,923 [INFO] ml-service: Successfully loaded keyword_lookup from C:\Users\samee\Downloads\spam mail\smart-inbox-guard\ml_service\models\artifacts\keyword_lookup.json
+2026-04-06 18:13:34,924 [INFO] ml-service: Successfully loaded scam_domains from C:\Users\samee\Downloads\spam mail\smart-inbox-guard\ml_service\models\artifacts\scam_domains.json
+2026-04-06 18:13:34,924 [INFO] ml-service: Model Metadata: {
+  "trained_at": "2026-04-03T20:47:46.302467",
+  "total_samples": 3000,
+  "label_distribution": {
+    "suspicious": 1000,
+    "safe": 1000,
+    "spam": 1000
+  },
+  "keyword_count": 0,
+  "spam_recall": 1.0,
+  "classes": [
+    "safe",
+    "spam",
+    "suspicious"
+  ],
+  "ensemble_weights": {
+    "stage1": 0.4,
+    "stage2": 0.2,
+    "stage3": 0.4
+  },
+  "template_override": true
+}
+2026-04-06 18:14:45,078 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 0f665c65-fc69-4811-87ca-7107995c51c9
+2026-04-06 18:14:45,251 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 0f665c65-fc69-4811-87ca-7107995c51c9
+2026-04-06 18:15:45,439 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request c29c438d-7690-4356-968f-675a4a81cee7
+2026-04-06 18:15:45,446 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for c29c438d-7690-4356-968f-675a4a81cee7
+2026-04-06 18:16:45,317 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 90155aec-bdbb-4632-9536-88b38a9a309c
+2026-04-06 18:16:45,321 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 90155aec-bdbb-4632-9536-88b38a9a309c
+2026-04-06 18:17:45,399 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 24b888f1-c717-4f46-a261-4b288e692aae
+2026-04-06 18:17:45,403 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 24b888f1-c717-4f46-a261-4b288e692aae
+2026-04-06 18:18:45,335 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 933f2ed4-89d3-4b3e-a970-3527ff1b581e
+2026-04-06 18:18:45,347 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 933f2ed4-89d3-4b3e-a970-3527ff1b581e
+2026-04-06 18:19:45,370 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 18d365b4-d24f-4a9d-9b81-9ca00e9d6b8a
+2026-04-06 18:19:45,377 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 18d365b4-d24f-4a9d-9b81-9ca00e9d6b8a
+2026-04-06 18:20:40,785 [INFO] ml-service: Processing classification request 204ddb27-70df-4e03-8154-a311569ddf51
+2026-04-06 18:20:40,918 [INFO] ml-service: Request 204ddb27-70df-4e03-8154-a311569ddf51 classified as safe with 0.68 confidence
+2026-04-06 18:20:44,508 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 1b54fa1c-a0ee-48f0-a66a-74c590393003
+2026-04-06 18:20:44,522 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 1b54fa1c-a0ee-48f0-a66a-74c590393003
+2026-04-06 18:21:45,429 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 0658c15f-6d5c-4570-983f-9ab5871a0d9a
+2026-04-06 18:21:45,439 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 0658c15f-6d5c-4570-983f-9ab5871a0d9a
+2026-04-06 18:22:44,547 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request e6541862-8442-42a8-8b9a-86975b3c39b0
+2026-04-06 18:22:44,556 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for e6541862-8442-42a8-8b9a-86975b3c39b0
+2026-04-06 18:23:45,477 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 8d8306ed-2823-4db2-8e3b-09d371c1aff8
+2026-04-06 18:23:45,483 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 8d8306ed-2823-4db2-8e3b-09d371c1aff8
+2026-04-06 18:25:07,402 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 220641c9-70c9-422c-ac8f-09ebaf018ebf
+2026-04-06 18:25:07,409 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 220641c9-70c9-422c-ac8f-09ebaf018ebf
+2026-04-06 18:26:07,461 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request cf51218d-cf62-4805-88c3-2ca5b71048d4
+2026-04-06 18:26:07,469 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for cf51218d-cf62-4805-88c3-2ca5b71048d4
+2026-04-06 18:27:07,396 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 9fa991f1-957f-44f6-9012-0c00a5b57a20
+2026-04-06 18:27:07,402 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 9fa991f1-957f-44f6-9012-0c00a5b57a20
+2026-04-06 18:28:07,385 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 2bf65e1b-29a2-45ab-8b43-542ba110ae9b
+2026-04-06 18:28:07,391 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 2bf65e1b-29a2-45ab-8b43-542ba110ae9b
+2026-04-06 18:29:07,367 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 45dca073-4d6b-4ea0-9dba-f3d9aca9381a
+2026-04-06 18:29:07,413 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 45dca073-4d6b-4ea0-9dba-f3d9aca9381a
+2026-04-06 18:30:07,553 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request f13b8f93-6ade-4561-9d43-c79a6af1c197
+2026-04-06 18:30:07,582 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for f13b8f93-6ade-4561-9d43-c79a6af1c197
+2026-04-06 18:30:18,557 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 731aeee7-2c8d-4e40-92cf-870290566ae5
+2026-04-06 18:30:18,563 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 731aeee7-2c8d-4e40-92cf-870290566ae5
+2026-04-06 18:30:52,327 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 948a7675-8fa0-452b-bf96-44992ac0e046
+2026-04-06 18:30:52,335 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 948a7675-8fa0-452b-bf96-44992ac0e046
+2026-04-06 18:30:52,426 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request ab890bca-13cc-4c60-a379-4bf57424726a
+2026-04-06 18:30:52,433 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for ab890bca-13cc-4c60-a379-4bf57424726a
+2026-04-06 18:31:10,756 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 2b2ebc94-38e3-447b-8341-483ef4e22b1d
+2026-04-06 18:31:10,781 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 2b2ebc94-38e3-447b-8341-483ef4e22b1d
+2026-04-06 18:32:11,358 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request 6b969fee-a593-4d6f-b431-f467a272b6fb
+2026-04-06 18:32:11,365 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for 6b969fee-a593-4d6f-b431-f467a272b6fb
+2026-04-06 18:33:11,332 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request db8bf0af-6a49-4fe7-a0ab-d493e28c73be
+2026-04-06 18:33:11,358 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for db8bf0af-6a49-4fe7-a0ab-d493e28c73be
+2026-04-06 18:34:11,333 [INFO] ml-service: [ThreatVelocity] Processing velocity data for request ee6db1e6-6e64-4600-9789-273f4773b864
+2026-04-06 18:34:11,337 [INFO] ml-service: [ThreatVelocity] Successfully computed velocity forecast for ee6db1e6-6e64-4600-9789-273f4773b864
