@@ -85,7 +85,13 @@ def load_artifacts():
         for missing_file in missing_startup_files:
             print(f"Missing required model file: {missing_file}")
         print("Please run python models/train.py first")
-        sys.exit(1)
+        
+        # Only exit if core model files are missing. Calibrator is non-fatal.
+        critical_missing = [f for f in missing_startup_files if f.startswith('model_stage')]
+        if critical_missing:
+            sys.exit(1)
+        else:
+            print("Starting in degraded mode (some non-critical artifacts missing)...")
 
     required_files = [
         ('model_stage1.pkl', 'stage1_pipeline'),
