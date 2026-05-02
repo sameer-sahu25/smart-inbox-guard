@@ -58,6 +58,7 @@ app.use(globalLimiter);
 
 // --- API Routes ---
 app.use('/api/v1/health', healthRoutes);
+app.use('/api/health', healthRoutes);
 app.use('/api/v1/auth', authRoutes);
 app.use('/api/v1/analyze', analyzeRoutes);
 app.use('/api/v1/dashboard', dashboardRoutes);

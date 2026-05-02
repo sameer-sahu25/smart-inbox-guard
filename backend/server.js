@@ -31,12 +31,12 @@ async function startServer() {
     await sequelize.sync({ alter: false });
     console.log('Database models synchronized');
     
-    // ML Handshake on Startup
+    // ML startup health check: GET /health on ML service
     const mlStatus = await mlService.checkHealth();
     if (mlStatus.available) {
-      console.log(`[ML Handshake] SUCCESS: Neural Engine is ${mlStatus.status.toUpperCase()}`);
+      console.log(`[ML Health] Reachable at ${mlService.apiUrl}/health (${mlStatus.status})`);
     } else {
-      console.warn(`[ML Handshake] WARNING: Neural Engine is OFFLINE. System running in limited mode.`);
+      console.warn(`[ML Health] Unreachable at ${mlService.apiUrl}/health. Neural Engine Offline.`);
     }
 
     app.listen(PORT, () => {

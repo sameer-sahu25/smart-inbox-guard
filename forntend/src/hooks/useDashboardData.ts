@@ -57,7 +57,7 @@ export const useDashboardData = () => {
 
   const checkMLHealth = useCallback(async () => {
     try {
-      const response = await fetch('/api/v1/health');
+      const response = await fetch('/api/health');
       const json = await response.json();
       if (json.success) {
         setMlServiceStatus(json.mlService === 'available' ? 'available' : 'unavailable');

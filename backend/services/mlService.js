@@ -55,6 +55,7 @@ class MLService {
 
   _getOfflineResponse() {
     return {
+      mlServiceOffline: true,
       error: 'ML_SERVICE_OFFLINE',
       message: 'The neural intelligence engine is currently offline. Please ensure the ML service is running on port 8000.',
       verdict: 'OFFLINE',

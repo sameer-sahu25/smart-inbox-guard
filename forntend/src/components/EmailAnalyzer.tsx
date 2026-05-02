@@ -149,19 +149,17 @@ const EmailAnalyzer = () => {
   // Check ML service status (Fix 4 & 5)
   const checkMLHealth = useCallback(async (isAutoRetry = false) => {
     try {
-      const response = await fetch('/api/v1/health');
+      const response = await fetch('/api/health');
       const data = await response.json();
       const isOnline = data.success && data.mlService === 'available';
       
       setMlStatus(isOnline ? 'online' : 'offline');
       setLastCheckTime(new Date());
 
-      // If it just came back online and we were offline, auto-retry the last analysis
-      if (isOnline && (result?.verdict === 'OFFLINE' || mlStatus === 'offline') && (body.trim() || sender.trim())) {
-        if (isAutoRetry) {
-          toast.success("ML Service restored! Re-analyzing...");
-          analyzeEmail();
-        }
+      if (isOnline && result?.verdict === 'OFFLINE') {
+        setResult(null);
+        setAnalysisError(null);
+        if (isAutoRetry) toast.success("ML Service restored. You can analyze again.");
       }
       
       return isOnline;
@@ -172,10 +170,10 @@ const EmailAnalyzer = () => {
     }
   }, [result, body, sender, mlStatus]);
 
-  // Periodic health check every 10s (Fix 4) and 15s (Fix 5 - combined here for efficiency)
+  // Periodic health check every 15s for auto recovery
   useEffect(() => {
     checkMLHealth();
-    const interval = setInterval(() => checkMLHealth(true), 10000); 
+    const interval = setInterval(() => checkMLHealth(true), 15000); 
     return () => clearInterval(interval);
   }, [checkMLHealth]);
 
@@ -193,7 +191,9 @@ const EmailAnalyzer = () => {
         
         if (!response.ok) {
           const errorData = await response.json().catch(() => ({}));
-          throw new Error(errorData.message || `Server error: ${response.status}`);
+          const err = new Error(errorData.error || errorData.message || `Server error: ${response.status}`) as Error & { mlServiceOffline?: boolean };
+          err.mlServiceOffline = Boolean(errorData.mlServiceOffline);
+          throw err;
         }
         return response;
       } catch (err: any) {
@@ -256,6 +256,16 @@ const EmailAnalyzer = () => {
         errorMessage = 'Network error: Could not reach the security server. Please check your connection and ensure the backend is running.';
       } else if (error.message.includes('404')) {
         errorMessage = 'Endpoint configuration error: The analysis service could not be found (404).';
+      } else if (error.mlServiceOffline) {
+        errorMessage = 'Neural Engine Offline. Start the ML service and retry.';
+        setMlStatus('offline');
+        if (error.data) {
+          setResult(error.data);
+        } else {
+          setResult({
+            verdict: 'OFFLINE'
+          } as AnalysisResult);
+        }
       } else {
         errorMessage = error.message || 'An unexpected error occurred during analysis.';
       }
@@ -521,7 +531,7 @@ const EmailAnalyzer = () => {
 
           <Button 
             onClick={analyzeEmail}
-            disabled={isScanning || (!body.trim() && !sender.trim())}
+            disabled={isScanning || mlStatus === 'offline' || (!body.trim() && !sender.trim())}
             className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-8 rounded-none uppercase tracking-[0.2em] text-sm transition-all hover:scale-[1.01] active:scale-[0.99] magenta-glow disabled:opacity-50"
           >
             {isScanning ? (
@@ -552,6 +562,21 @@ const EmailAnalyzer = () => {
             <p className="text-xs text-amber-200/80 mt-1">
               {result.explanation || "The analysis engine is unavailable right now. Please start the ML service and try again."}
             </p>
+            <div className="mt-3 flex items-center gap-2">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={analyzeEmail}
+                disabled={isScanning}
+                className="border-amber-500/40 text-amber-300 hover:bg-amber-500/10"
+              >
+                <RefreshCw className="w-3 h-3 mr-2" />
+                Retry Analysis
+              </Button>
+              <span className="text-[10px] text-amber-200/70">
+                {mlStatus === 'online' ? 'Service online' : 'Auto-checking every 15 seconds'}
+              </span>
+            </div>
           </div>
         )}
 

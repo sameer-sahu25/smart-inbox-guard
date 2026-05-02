@@ -67,17 +67,24 @@ ARTIFACTS: Dict[str, Any] = {
 
 def load_artifacts():
     logger.info("Loading model artifacts...")
-    
-    # Check for model_stage1.pkl existence before starting (Fix 2)
-    stage1_path = os.path.join(ARTIFACTS_DIR, 'model_stage1.pkl')
-    if not os.path.exists(stage1_path):
-        stage1_path = os.path.join(MODEL_DIR, 'model_stage1.pkl')
-    
-    if not os.path.exists(stage1_path):
-        print("\n" + "="*50)
-        print("ERROR: model_stage1.pkl NOT FOUND")
-        print("Please run 'python models/train.py' first.")
-        print("="*50 + "\n")
+
+    required_startup_files = [
+        "model_stage1.pkl",
+        "model_stage2.pkl",
+        "model_stage3.pkl",
+        "calibrator.pkl",
+    ]
+    missing_startup_files = []
+    for filename in required_startup_files:
+        artifact_path = os.path.join(ARTIFACTS_DIR, filename)
+        model_path = os.path.join(MODEL_DIR, filename)
+        if not os.path.exists(artifact_path) and not os.path.exists(model_path):
+            missing_startup_files.append(filename)
+
+    if missing_startup_files:
+        for missing_file in missing_startup_files:
+            print(f"Missing required model file: {missing_file}")
+        print("Please run python models/train.py first")
         sys.exit(1)
 
     required_files = [
@@ -116,10 +123,6 @@ def load_artifacts():
         except Exception as e:
             logger.error(f"Failed to load artifact {filename}: {str(e)}")
 
-    print("\n" + "*"*50)
-    print("ML service ready on port 8000")
-    print("*"*50 + "\n")
-
     # Load calibrator separately as it has its own load method
     calibrator_path = os.path.join(ARTIFACTS_DIR, 'calibrator.pkl')
     if not os.path.exists(calibrator_path):
@@ -134,6 +137,8 @@ def load_artifacts():
 
     if ARTIFACTS['meta']:
         logger.info(f"Model Metadata: {json.dumps(ARTIFACTS['meta'], indent=2)}")
+
+    print("ML service ready on port 8000")
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):

@@ -4,6 +4,15 @@ const { success, error } = require('../utils/responseHelper');
 exports.analyze = async (req, res, next) => {
   try {
     const result = await classificationService.classifyEmail(req.body, req.user, req);
+    if (result?.mlServiceOffline || result?.error === 'ML_SERVICE_OFFLINE') {
+      return res.status(503).json({
+        success: false,
+        error: result.message || 'ML service is currently offline',
+        mlServiceOffline: true,
+        data: result,
+        timestamp: new Date().toISOString()
+      });
+    }
     return success(res, result, 'Analysis complete');
   } catch (err) {
     next(err);

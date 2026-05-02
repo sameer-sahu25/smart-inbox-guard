@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 
 const AnalyticsSection = () => {
   const { isAuthenticated } = useAuth();
-  const { stats, changes, trend, forecast, isLoading, error } = useDashboardData();
+  const { stats, changes, trend, forecast, isLoading, error, mlServiceStatus } = useDashboardData();
   const [demoData, setDemoData] = useState<{
     stats: any,
     changes: any,
@@ -19,6 +19,19 @@ const AnalyticsSection = () => {
   const activeChanges = demoData ? demoData.changes : changes;
   const activeTrend = demoData ? demoData.trend : trend;
   const activeForecast = demoData ? demoData.forecast : forecast;
+  const normalizedTrend = (activeTrend || []).map((item: any) => {
+    const safe = Number(item?.safe ?? item?.safe_emails ?? item?.probabilities?.safe ?? 0);
+    const suspicious = Number(item?.suspicious ?? item?.phishing ?? item?.phishing_alerts ?? item?.suspicious_incidents ?? item?.probabilities?.suspicious ?? 0);
+    const spam = Number(item?.spam ?? item?.scam ?? item?.scam_detected ?? item?.probabilities?.spam ?? 0);
+    return {
+      ...item,
+      safe,
+      suspicious,
+      spam,
+      total: Number(item?.total ?? (safe + suspicious + spam))
+    };
+  });
+  const hasTrendData = normalizedTrend.some((d: any) => d.safe > 0 || d.suspicious > 0 || d.spam > 0);
 
   const toggleDemoData = () => {
     if (demoData) {
@@ -220,13 +233,17 @@ const AnalyticsSection = () => {
                     <div key={i} className="w-4 bg-white/5 animate-pulse rounded-t" style={{ height: `${20 + Math.random() * 60}%` }} />
                   ))}
                 </div>
-              ) : (!activeTrend || activeTrend.length === 0 || activeTrend.every(d => d.total === 0)) ? (
+              ) : (mlServiceStatus === 'unavailable') ? (
+                <div className="absolute inset-0 flex items-center justify-center text-white/40 font-bold uppercase tracking-widest text-xs text-center px-12 leading-relaxed">
+                  No data available.
+                </div>
+              ) : (!normalizedTrend.length || !hasTrendData) ? (
                 <div className="absolute inset-0 flex items-center justify-center text-white/40 font-bold uppercase tracking-widest text-xs text-center px-12 leading-relaxed">
                   No classification data yet. <br /> Analyze some emails to see your threat trend.
                 </div>
               ) : (
                 <ResponsiveContainer width="100%" height="100%">
-                  <AreaChart data={activeTrend}>
+                  <AreaChart data={normalizedTrend}>
                     <defs>
                       <linearGradient id="colorSpam" x1="0" y1="0" x2="0" y2="1">
                         <stop offset="5%" stopColor="#ff0033" stopOpacity={0.3}/>
